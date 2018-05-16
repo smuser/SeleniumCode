@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Java">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../SofwareSelenium/jee-neon/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Java.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Java.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Array3D">
+        <java classname="Array3D" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Arrayexample">
+        <java classname="ArrayExample" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="ArrayLists">
+        <java classname="ArrayLists" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Bank1">
+        <java classname="Practice.Bank1" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="BubbleSort">
+        <java classname="BubbleSort" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Employee">
+        <java classname="Employee" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Fibonacci">
+        <java classname="Fibonacci" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Flyods">
+        <java classname="Flyods" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="ForLooping">
+        <java classname="ForLooping" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="IfElseIfExample">
+        <java classname="IfElseIfExample" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Input">
+        <java classname="Input" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="JaggedArrays">
+        <java classname="JaggedArrays" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="loops">
+        <java classname="Loops" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="MatrixArrayUse">
+        <java classname="MatrixArrayUse" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Maximum">
+        <java classname="Maximum" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Minimum">
+        <java classname="Minimum" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="MyArraylistexample">
+        <java classname="MyArraylistexample" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="MyClass">
+        <java classname="MyClass" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="MyClassInheritance">
+        <java classname="MyClassInheritance" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="MyClassStudent">
+        <java classname="MyClassStudent" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="MyPolymorphism">
+        <java classname="MyPolymorphism" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Myswitch">
+        <java classname="Myswitch" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Name">
+        <java classname="Name" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="OddEven">
+        <java classname="OddEven" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Palindrome">
+        <java classname="Palindrome" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="PassingParameters">
+        <java classname="PassingParameters" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Pattern">
+        <java classname="Pattern" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Practice">
+        <java classname="Practice" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Pyramid">
+        <java classname="Pyramid" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Sorting">
+        <java classname="Sorting" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Star">
+        <java classname="Practice.Star" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="StringClass">
+        <java classname="StringClass" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="stringexample">
+        <java classname="stringexample" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Sum">
+        <java classname="Sum" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Swap">
+        <java classname="Swap" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="TestArray">
+        <java classname="TestArray" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Test_Ploymorpism">
+        <java classname="Practice.Test_Ploymorpism" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="TimePass">
+        <java classname="Practice.TimePass" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+    <target name="Triangle">
+        <java classname="Practice.Triangle" failonerror="true" fork="yes">
+            <classpath refid="Java.classpath"/>
+        </java>
+    </target>
+</project>
